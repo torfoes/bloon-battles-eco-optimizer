@@ -1,0 +1,51 @@
+Round Number,Bloons,Round Length,Min Time Till Next Round,Max Time Till Next Round
+1,35 Red,19,23,29
+2,35 Red;18 Blue,17,21,27
+3,15 Red;15 Blue;4 Green,19,23,29
+4,10 Red;20 Blue;14 Green,24,28,34
+5,56 Blue,23,27,33
+6,15 Blue;10 Green;5 Yellow,18,22,28
+7,31 Red;10 Blue;5 Green;5 Yellow,18,22,28
+8,40 Green;8 Yellow,16,20,26
+9,50 Green,14,18,24
+10,6 Black,5,9,15
+11,16 White,8,12,18
+12,20 Blue;Camo Green,11,15,21
+13,23 Pink;4 Zebra,15,19,25
+14,6 Lead,5,9,15
+15,9 Lead,13,17,23
+16,15 Black;20 White;10 Purple,28,32,38
+17,160 Yellow;6 Zebra,36,40,46
+18,140 Pink;20 Camo Regrow Green,21,25,31
+19,42 Pink;17 White;10 Zebra;14 Lead;2 Ceramic,29,33,39
+20,MOAB,0.5,4,15
+21,6 Regrow Rainbow;5 Camo Rainbow,12,16,22
+22,50 Zebra,24,28,34
+23,6 Fortified Ceramic,7,11,17
+24,40 Regrow Pink;30 Camo Regrow Purple;40 Rainbow;3 Fortified Ceramic,56,60,66
+25,20 Red;8 Fortified Lead;20 Ceramic;2 MOAB,29,33,39
+26,25 Rainbow;10 Ceramic;2 MOAB,21,25,31
+27,35 Ceramic;2 MOAB,19,23,29
+28,40 Camo Rainbow;MOAB,16,20,26
+29,15 Ceramic;10 Fortified Ceramic;5 MOAB,44,48,54
+30,BFB,0.5,4,15
+31,250 Purple;15 Camo Regrow Rainbow;5 MOAB;2 Fortified MOAB,48,52,58
+32,6 MOAB;3 Fortified MOAB,10,14,20
+33,8 MOAB;3 Fortified MOAB,23,27,33
+34,4 MOAB;BFB,8,12,18
+35,120 Camo Regrow White;200 Rainbow;4 MOAB,41,45,51
+36,38 Regrow Ceramic;2 BFB,22,26,32
+37,50 Ceramic;60 Fortified Ceramic;25 Camo Regrow Fortified Ceramic;BFB,83,87,93
+38,11 MOAB;5 BFB,55,59,65
+39,80 Purple;150 Rainbow;75 Ceramic;72 Camo Ceramic;BFB,90,94,100
+40,ZOMG,0.5,4,15
+41,10 BFB;5 Fortified BFB,36,40,46
+42,50 MOAB;10 BFB,25,29,35
+43,5 Fortified BFB,21,25,31
+44,18 MOAB;8 BFB;2 ZOMG,15,19,25
+45,50 Camo Regrow Fortified Lead;3 DDT,12,16,22
+46,50 Fortified MOAB;4 ZOMG,35,39,45
+47,25 BFB;6 ZOMG,15,19,25
+48,40 Fortified MOAB;30 BFB;6 ZOMG,32,36,42
+49,30 Fortified BFB;8 ZOMG,30,34,40
+50,BAD,0.5,4,15

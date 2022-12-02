@@ -1,6 +1,6 @@
 from pandas import read_csv
 from BloonSend import BloonSend
-
+from RoundSimulator import RoundSimulator
 
 def run():
     bloon_data = read_csv('bloon_data.csv').values
@@ -15,8 +15,11 @@ def run():
 
 
     # Demonstrates a function that the BloonsSend function may have
-    sends[2].graph_payoff_time()
+    # sends[2].graph_payoff_time()
 
+    x = RoundSimulator()
+    # gives information about the input round
+    x.round_info(3)
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
     run()
