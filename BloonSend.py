@@ -12,9 +12,11 @@ class BloonSend:
         self.eco_boost = eco_boost
         self.send_delay = send_delay
 
+
         DIFFICULTY_SCORE = 0
 
     def graph_payoff_time(self):
+        print(self.send_delay)
         x = []
         y = []
 
@@ -37,5 +39,5 @@ class BloonSend:
         plt.xticks(x)
         plt.xlabel('Time Passed')
         plt.ylabel('Debt')
-        plt.title('{} send payoff time'.format(self.type))
+        plt.title('{} payoff time'.format(self.type))
         plt.show()
