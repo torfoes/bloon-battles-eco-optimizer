@@ -1,5 +1,4 @@
 import matplotlib.pyplot as plt
-import pandas as pd
 
 compounding_freq = 6
 
@@ -12,8 +11,18 @@ class BloonSend:
         self.eco_boost = eco_boost
         self.send_delay = send_delay
 
-
         DIFFICULTY_SCORE = 0
+
+    def info(self):
+        try:
+            print("Type {}: \nNumber: {}\nCost: {}\nEco Boost: {}\nSend Delay: {}".format(self.type,
+                                                                                          self.num,
+                                                                                          self.cost,
+                                                                                          self.eco_boost,
+                                                                                          self.send_delay))
+
+        except Exception:
+            print("What the fuck dumbass")
 
     def graph_payoff_time(self):
         print(self.send_delay)

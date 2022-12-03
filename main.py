@@ -1,34 +1,18 @@
-from pandas import read_csv
-from BloonSend import BloonSend
-from RoundSimulator import RoundSimulator
+from simulator import Simulator
 
 
 def run():
-    bloon_data = read_csv('bloon_data.csv').values
+    sim = Simulator()
 
-    # this is just making sure that i can open monkey_data.py
-    # monkey_data = read_csv('monkey_data.csv').values
-    # print(monkey_data)
+    sim.round_info(4)
 
-    # An array that contains BloonSend objects pulled from the CSV
-    sends = []
+    # an example of how you
+    bl = sim.bloon_data[3]
+    print(sim.bloon_data[3].info)
 
-    # Takes the bloon data and converts it in BloonSend objects.
-    for traits in bloon_data:
-        bloon_stats = BloonSend(traits[0], traits[1], traits[2], traits[3], traits[7])
-        sends.append(bloon_stats)
-
-
-    # Demonstrates a function that the BloonSend function may have
-    sends[14].graph_payoff_time()
-
-    #x = RoundSimulator()
-    # gives information about the input round
-    #x.round_info(3)
+    # bl.graph_payoff_time()
 
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
     run()
-
-
