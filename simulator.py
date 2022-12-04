@@ -3,7 +3,7 @@ from file_loader import *
 
 class Simulator:
     def __init__(self):
-        self.round_data = read_csv('data/round_data.csv').values
+        self.round_data = read_csv('resources/round_data.csv').values
         self.bloon_data = load_bloon_data()
 
     def round_info(self, num):
