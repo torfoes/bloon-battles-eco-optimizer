@@ -1,21 +1,54 @@
 BoxLayout:
-    orientation: "vertical"
-    padding: 10
-
-    Label:
-        text: "Username"
-
-    TextInput:
-        id: username_input
-
-    Label:
-        text: "Password"
-
-    TextInput:
-        id: password_input
-        password: True
+    orientation: "horizontal"
+    rows: 2
 
     Button:
-        text: "Submit"
-        on_press:
-            app.login(username_input.text, password_input.text)
+        text: "This will be the canvas where stuff is rendered"
+
+
+    ScrollView:
+        size_hint_x: .1875
+
+        BoxLayout:
+            orientation: "vertical"
+            size_hint_y: None
+            height: self.width
+
+            GridLayout:
+                cols: 2
+
+                Button:
+                    size_hint_y: None
+                    size_hint_x: .5
+
+                    height: self.width
+                    text: 'TEST'
+
+                Button:
+                    size_hint_y: None
+                    size_hint_x: .5
+
+                    height: self.width
+                    text: '1'
+
+                Button:
+                    size_hint_y: None
+                    size_hint_x: .5
+
+                    height: self.width
+                    text: '1'
+
+                Button:
+                    size_hint_y: None
+                    size_hint_x: .5
+                    height: self.width
+                    text: '1'
+
+                Button:
+                    size_hint_y: None
+                    size_hint_x: .5
+                    height: self.width
+                    text: 'bitchass'
+
+
+
