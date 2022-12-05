@@ -8,6 +8,10 @@ from kivy.uix.progressbar import ProgressBar
 from kivy.lang import Builder
 from kivy import *
 
+
+class MainScreen(BoxLayout):
+    pass
+
 class AppInterface(App):
     pass
 
