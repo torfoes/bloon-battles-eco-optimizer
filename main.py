@@ -1,14 +1,15 @@
-from gui_launcher import MyApp
+from gui.app_interface import AppInterface
 from simulator import Simulator
+from kivy.lang import Builder
 
 
 def run():
-    sim = Simulator()
+    # sim = Simulator()
+    #
+    # sim.send_cluster(4)
+    # sim.round_info(3)
+    AppInterface().run()
 
-    sim.send_cluster(4)
-    sim.round_info(3)
-
-    MyApp().run()
 
     # # an example of how you
     # bl = sim.bloon_data[3]

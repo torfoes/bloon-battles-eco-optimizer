@@ -1,0 +1,21 @@
+BoxLayout:
+    orientation: "vertical"
+    padding: 10
+
+    Label:
+        text: "Username"
+
+    TextInput:
+        id: username_input
+
+    Label:
+        text: "Password"
+
+    TextInput:
+        id: password_input
+        password: True
+
+    Button:
+        text: "Submit"
+        on_press:
+            app.login(username_input.text, password_input.text)
