@@ -15,20 +15,19 @@ from kivy.uix.progressbar import ProgressBar
 #         self.add_widget(self.label)
 #         self.add_widget(self.progress_bar)
 
-
 class MyApp(App):
     def build(self):
         layout = BoxLayout(orientation="horizontal")
 
-
-        layout.add_widget(Button(text="Button 1"))
+        layout.add_widget(Button(text="Button 1", background_normal="resources/media/bloons/Big_Airship_of_Doom.webp"))
         layout.add_widget(Label(text="Hello, World!"))
         layout.add_widget(Button(text="Click me!", on_press=self.button_clicked))
+
+
 
         # layout.add_widget(StatusIndicator())
 
         return layout
 
-
     def button_clicked(self, instance):
-        instance.text = "You clicked me!"
+        instance.text = "bitch ass"

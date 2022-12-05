@@ -1,10 +1,19 @@
 from file_loader import *
+from game_entities.cluster import Cluster
 
 
 class Simulator:
     def __init__(self):
-        self.round_data = read_csv('resources/round_data.csv').values
-        self.bloon_data = load_bloon_data()
+        self.round_data = load_round_data()
+        self.queue = []
+
+        # while all of this is nice, there really isn't too much of a point till you have a renderer
+
+    # i need a way to nicely pass the **kwargs through this function
+    def send_cluster(self, bloon_id):
+        x = Cluster(bloon_id, fortified=True)  # this is just a demo
+        self.queue.append(x)
+        # print(self.queue)
 
     def round_info(self, num):
         try:
@@ -14,5 +23,5 @@ class Simulator:
                                                                                             self.round_data[num][3],
                                                                                             self.round_data[num][4]))
         except Exception:
-            print("What the fuck dumbass")
+            print("What the fuck dumbass.")
 
