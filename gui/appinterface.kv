@@ -9,11 +9,11 @@ BoxLayout:
         orientation: "vertical"
         size_hint_x: .2
 
-        ScrollView:
+        StandardScroll:
             GroupedGrid:
                 orientation: "vertical"
                 size_hint_y: None
-                height: self.width
+
 
         BoxLayout:
             orientation: "horizontal"
@@ -27,12 +27,14 @@ BoxLayout:
                 text: "fortified"
 
 
+<StandardScroll>:
 
 
 <ClusterButton>:
     size_hint_y: None
     size_hint_x: .5
     height: self.width
+
 
 
 <AttributeToggle>:
@@ -42,3 +44,4 @@ BoxLayout:
     text: "This will be the toggle button camo n stuff"
     on_press:
         self.update_text()
+

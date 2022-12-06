@@ -10,8 +10,11 @@ from kivy.uix.progressbar import ProgressBar
 from kivy.lang import Builder
 from kivy import *
 from kivy.uix.scrollview import ScrollView
+from kivy.effects.dampedscroll import DampedScrollEffect
 from game_entities.cluster import Cluster
 from file_loader import load_cluster_data
+from kivy.effects.scroll import ScrollEffect
+from kivy.properties import ObjectProperty
 
 
 class AppInterface(App):
@@ -34,7 +37,6 @@ class ClusterButton(Button):
         print(self.embedded_cluster.name)
 
     pass
-
 
 # ahh
 class GroupedGrid(BoxLayout):
@@ -64,3 +66,10 @@ class AttributeToggle(ToggleButton):
         # Update the text of the button when it is pressed
         else:
             self.text = "Not " + split_string[0]
+
+
+class StandardScroll(ScrollView):
+    def __init__(self, **kwargs):
+        super().__init__(**kwargs)
+        # self.effect_cls =
+    pass
