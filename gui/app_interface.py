@@ -52,9 +52,15 @@ class GroupedGrid(BoxLayout):
 
 
 class AttributeToggle(ToggleButton):
+    def __init__(self, **kwargs):
+        super().__init__(**kwargs)
+
     def update_text(self):
-        if self.text.split()[0] == "Not":
-            self.text = "Camo"
+        split_string = self.text.split()
+
+        if split_string[0] == "Not":
+            self.text = split_string[1]
+
         # Update the text of the button when it is pressed
         else:
-            self.text = "Not Camo"
+            self.text = "Not " + split_string[0]
