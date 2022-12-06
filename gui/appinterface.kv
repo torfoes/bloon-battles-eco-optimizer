@@ -5,50 +5,31 @@ BoxLayout:
     Button:
         text: "This will be the canvas where stuff is rendered"
 
+    BoxLayout:
+        orientation: "vertical"
+        size_hint_x: .2
 
-    ScrollView:
-        size_hint_x: .1875
+        ScrollView:
+            GroupedGrid:
+                orientation: "vertical"
+                size_hint_y: None
+                height: self.width
 
-        BoxLayout:
-            orientation: "vertical"
-            size_hint_y: None
-            height: self.width
-
-            GridLayout:
-                cols: 2
-
-
-                Button:
-                    size_hint_y: None
-                    size_hint_x: .5
-                    height: self.width
-                    text: "111"
+        AttributeToggle:
 
 
-                Button:
-                    size_hint_y: None
-                    size_hint_x: .5
-
-                    height: self.width
-                    text: '1'
-
-                Button:
-                    size_hint_y: None
-                    size_hint_x: .5
-
-                    height: self.width
-                    text: '1'
-
-                Button:
-                    size_hint_y: None
-                    size_hint_x: .5
-                    height: self.width
-                    text: '1'
-
-                Button:
-                    size_hint_y: None
-                    size_hint_x: .5
-                    height: self.width
-                    text: 'bitchass'
 
 
+<ClusterButton>:
+    size_hint_y: None
+    size_hint_x: .5
+    height: self.width
+
+
+<AttributeToggle>:
+    size_hint_y: None
+    height: self.width
+
+    text: "This will be the toggle button camo n stuff"
+    on_press:
+        self.update_text()

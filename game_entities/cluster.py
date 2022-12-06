@@ -7,7 +7,8 @@ class Cluster:
     data = []  # SICK AS SHIT CLASS VARIABLE - avoids having to read in all the data and file each instance
 
     def __init__(self, bloon_id, **kwargs):
-        self.type = bloon_id
+        self.id = bloon_id
+
 
         self.regrow = kwargs.get("regrow", False)
         self.camo = kwargs.get("camo", False)
