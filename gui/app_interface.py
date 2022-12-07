@@ -8,16 +8,23 @@ from kivy.uix.widget import Widget
 from kivy.uix.label import Label
 from kivy.uix.progressbar import ProgressBar
 from kivy.lang import Builder
-from kivy import *
+from kivy.uix.image import Image
 from kivy.uix.scrollview import ScrollView
 from kivy.effects.dampedscroll import DampedScrollEffect
 from game_entities.cluster import Cluster
 from file_loader import load_cluster_data
 from kivy.effects.scroll import ScrollEffect
 from kivy.properties import ObjectProperty
+from simulator import Simulator
+from kivy import Config
+
+# Config.set('graphics', 'resizable', True)
 
 
 class AppInterface(App):
+    def __int__(self, **kwargs):
+        super().__init__(**kwargs)
+        self.start_sim = Simulator()
     pass
 
 
@@ -29,14 +36,14 @@ class MainScreen(BoxLayout):
 
 
 # a subclass of button tha
-class ClusterButton(Button):
+class ClusterButton(Button, Cluster):
     def __int__(self, **kwargs):
         super().__init__(**kwargs)
         self.embedded_cluster = Cluster(
-            kwargs.get("bloon_id", 0))  # i have this just so i know what is happening --- also VAIRABLE NAEMS
-        print(self.embedded_cluster.name)
+            kwargs.get("bloon_id", 1))  # i have this just so i know what is happening --- also VAIRABLE NAEMS
 
     pass
+
 
 # ahh
 class GroupedGrid(BoxLayout):
@@ -45,10 +52,10 @@ class GroupedGrid(BoxLayout):
         # self.height = self.width
         button_grid = GridLayout(cols=kwargs.get("cols", 2))
 
-        bloon_data = load_cluster_data()
+        self.bloon_data = load_cluster_data()
 
-        for bloon in bloon_data:
-            button_grid.add_widget(ClusterButton(text=str(bloon[1])))
+        for i, bloon in enumerate(self.bloon_data):
+            button_grid.add_widget(ClusterButton(bloon_id=i, background_normal=bloon[11]))
 
         self.add_widget(button_grid)
 

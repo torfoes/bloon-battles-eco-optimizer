@@ -17,7 +17,7 @@ BoxLayout:
 
         BoxLayout:
             orientation: "horizontal"
-            size_hint_y: None
+            size_hint_y: 1/10
 
             AttributeToggle:
                 text: "regrow"
@@ -35,11 +35,15 @@ BoxLayout:
     size_hint_x: .5
     height: self.width
 
+    #     Image:
+    #    source: self.image_source
+
 
 
 <AttributeToggle>:
     size_hint_y: None
     height: self.width
+    border: "0dp"
 
     text: "This will be the toggle button camo n stuff"
     on_press:

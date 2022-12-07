@@ -9,23 +9,30 @@ class Cluster:
     def __init__(self, bloon_id, **kwargs):
         self.id = bloon_id
 
+        # This is a very important line. it loads the cluster data, and stores it as a class variable
+        # no reloading each instance.
+        if not Cluster.data:
+            Cluster.data = load_cluster_data()
 
         self.regrow = kwargs.get("regrow", False)
         self.camo = kwargs.get("camo", False)
         self.fortified = kwargs.get("fortified", False)
         self.grouped = kwargs.get("grouped", False)
 
-        Cluster.data = load_cluster_data()
+
 
         self.name = self.data[bloon_id][0]
         self.num = self.data[bloon_id][1]
         self.cost = self.data[bloon_id][2]
         self.eco = self.data[bloon_id][3]
         self.delay = self.data[bloon_id][7]
+        self.icon_source = self.data[bloon_id][11]
+
+
 
     def info(self):
         try:
-            print("Type {}: \nNumber: {}\nCost: {}\nEco Boost: {}\nSend Delay: {}".format(self.type,
+            print("Type {}: \nNumber: {}\nCost: {}\nEco Boost: {}\nSend Delay: {}".format(self.name,
                                                                                           self.num,
                                                                                           self.cost,
                                                                                           self.eco,

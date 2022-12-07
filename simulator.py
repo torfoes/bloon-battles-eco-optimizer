@@ -12,8 +12,22 @@ class Simulator:
     # i need a way to nicely pass the **kwargs through this function
     def send_cluster(self, bloon_id):
         x = Cluster(bloon_id, fortified=True)  # this is just a demo
+
+
         self.queue.append(x)
-        # print(self.queue)
+
+        print(self.queue)
+
+
+
+
+
+
+
+
+
+
+
 
     def round_info(self, num):
         try:

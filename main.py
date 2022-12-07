@@ -5,7 +5,9 @@ from kivy.lang import Builder
 
 def run():
     # sim = Simulator()
+    # # # #
     # #
+    # sim.send_cluster(4)
     # sim.send_cluster(4)
     # sim.round_info(3)
     AppInterface().run()
